@@ -1,0 +1,30 @@
+name: proto2openapi
+author: cozyGalvinism <jean@der-capta.in>
+version: "0.1.0"
+about: "Convert proto files with special comments to OpenAPI 3.0.0"
+
+args:
+  - proto:
+      short: p
+      long: proto
+      help: "Path to proto file"
+      takes_value: true
+      number_of_values: 1
+      multiple: true
+      required: true
+  - openapi-title:
+      short: t
+      long: title
+      help: "Title of the OpenAPI document"
+      takes_value: true
+      required: true
+  - openapi-version:
+      short: v
+      long: version
+      help: "Version of the OpenAPI document"
+      takes_value: true
+      required: true
+  - OUTPUT:
+      help: "Path to output OpenAPI file"
+      required: true
+      index: 1
